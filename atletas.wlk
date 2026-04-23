@@ -1,9 +1,7 @@
-import disciplina.*
+import disciplinas.*
 import elementos.*
 
-#separar las disciplinas y elementos de este archivo 
-
-Object Victoria {
+Object victoria {
 
    var edad = 22
    var property altura = 160
@@ -21,42 +19,19 @@ Object Victoria {
       edad = edad + 1
    }
 
-   --------------
-   #Al usar la herramienta property genera estos 2  
+   /* Al usar la herramienta property genera estos 2  
    method altura() { este es el getter (responde el)
       return altura
    }
    method altura(valor) { este es el setter (cambia el)
       altura = valor 
    }
-   --------------
+   */
+
    method presupuestoPropio() {
       return cantidadDeEntrenadores * (comite.presupuestoEntrenador() + elemento.presupuesto(self))
    }
 } 
-
-
-
-Object tenis {
-
-   var property cantidadDeHinchas = 5
-
-   method presupuesto() {
-      return 200 + 3 * cantidadDeHinchas
-   }
-}
-
-Object judo {
-
-   var property cantidadDeMedallas = 3
-   
-   method presupuesto() {
-      return 160 * cantidadDeMedallas 
-   }
-   method sumarUnaMedalla() {
-      cantidadDeMedallas = cantidadDeMedallas + 1
-   }
-}
 
 
 
